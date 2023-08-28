@@ -1,0 +1,182 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+
+
+//===================================================================================================
+
+.title {
+    font-family: 'Taviraj';
+    font-weight: 500;
+    font-size: rem(36);
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: $darkColor;
+    @include adaptiveValue("font-size", 36, 28);
+
+    &::after {
+        content: "";
+        margin-top: em(8, 36);
+        width: em(128, 36);
+        height: rem(1);
+        display: block;
+        background-color: #000;
+    }
+
+    &_small {
+        &::after {
+            width: em(65, 36);
+        }
+    }
+
+    &_semibold {
+        font-weight: 600;
+    }
+
+    &_white {
+        color: #fff;
+        font-size: rem(24);
+
+        &::after {
+            background-color: #fff;
+            margin-top: em(10, 24);
+        }
+    }
+}
+
+//===================================================================================================
+.label-footer {
+    font-family: "Taviraj";
+    font-size: rem(20);
+    line-height: math.div(28, 20);
+    letter-spacing: 0.02em;
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: rem(5);
+    }
+}
+
+//===================================================================================================
+
+.search-form {
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: em(20, 36);
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: rem(20);
+        align-items: flex-start;
+
+        @media (max-width: em(460)) {
+            flex-direction: column;
+        }
+    }
+
+    &__line {
+        flex: 1 1 auto;
+
+        .form__error {
+            font-weight: 700;
+            color: red;
+            margin-top: rem(5);
+            padding-left: rem(23);
+        }
+    }
+
+    &__input {
+        font-size: rem(20);
+        height: rem(50);
+
+
+        &::placeholder {
+            color: #111;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(25);
+    font-size: rem(32);
+
+
+    &__item {
+        transition: opacity 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+//===================================================================================================
+
+.text {
+    line-height: math.div(22, 16);
+    letter-spacing: 0.03em;
+}
+
+//===================================================================================================
+
+.breadcrumbs {
+
+    &__container {
+        overflow: auto;
+    }
+
+    &__list {
+        display: flex;
+        gap: rem(5);
+        font-family: 'Taviraj';
+        line-height: 1.68;
+        letter-spacing: 0.02em;
+        color: $darkColor;
+        white-space: nowrap;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            display: flex;
+            gap: rem(5);
+
+            &::after {
+                content: "/";
+
+            }
+        }
+    }
+
+    &__link {}
+
+    &__current {
+        color: $orangeColor;
+    }
+}
+
+//===================================================================================================
+
+.old-price {
+    font-family: 'Taviraj';
+    position: relative;
+    padding: 0 rem(2);
+    display: inline-block;
+    line-height: math.div(24, 16);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: rem(1);
+        width: 100%;
+
+        background-color: $orangeColor;
+    }
+}

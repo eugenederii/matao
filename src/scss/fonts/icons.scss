@@ -1,0 +1,94 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+
+._icon-arrow-select:before {
+	content: "\e901";
+}
+
+._icon-arrow-slider:before {
+	content: "\e902";
+}
+
+._icon-arrow-slider-long:before {
+	content: "\e903";
+}
+
+._icon-cart:before {
+	content: "\e904";
+}
+
+._icon-cart-plus:before {
+	content: "\e905";
+}
+
+._icon-delete:before {
+	content: "\e906";
+}
+
+._icon-hart:before {
+	content: "\e907";
+}
+
+._icon-mines:before {
+	content: "\e908";
+}
+
+._icon-plus:before {
+	content: "\e909";
+}
+
+._icon-search:before {
+	content: "\e90a";
+}
+
+._icon-s-facebook:before {
+	content: "\e90b";
+}
+
+._icon-s-inst:before {
+	content: "\e90c";
+}
+
+._icon-s-twitter:before {
+	content: "\e90d";
+}
+
+._icon-s-youtube:before {
+	content: "\e90e";
+}
+
+._icon-user:before {
+	content: "\e90f";
+}
+
+._icon-social-linkedin-circular:before {
+	content: "\e900";
+}
+
+._icon-facebook2:before {
+	content: "\ea91";
+}
+
+._icon-instagram:before {
+	content: "\ea92";
+}
+
+._icon-twitter:before {
+	content: "\ea96";
+}

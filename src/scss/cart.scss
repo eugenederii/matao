@@ -1,0 +1,307 @@
+.cart {
+
+
+    &__items {}
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(40);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        gap: rem(20);
+        justify-content: space-between;
+        padding-top: rem(35);
+        padding-bottom: rem(25);
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+            gap: rem(30);
+        }
+    }
+
+    &__promo {}
+
+    &__total {}
+
+    &__button {
+        width: 100%;
+    }
+}
+
+.item-cart {
+    padding-bottom: rem(40);
+    border-bottom: rem(1) solid #999999;
+    display: grid;
+    grid-template-columns: rem(144) 1fr auto;
+    gap: rem(32);
+
+    @media (max-width:$tablet) {
+        grid-template-columns: rem(144) 1fr;
+    }
+
+    @media (max-width: em(500)) {
+        grid-template-columns: 1fr;
+    }
+
+    &__image {
+        background-color: $orangeColorLite;
+        height: rem(144);
+        padding: rem(10);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        display: grid;
+        align-content: start;
+        justify-items: start;
+    }
+
+    &__title {
+        font-size: rem(20);
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #333333;
+        color: $darkColor;
+
+        &:not(:last-child) {
+            margin-bottom: rem(2);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__old-price {}
+
+    &__price {
+        font-size: rem(24);
+        line-height: math.div(32, 24);
+        font-family: 'Taviraj';
+        letter-spacing: 0.02em;
+        color: $darkColor;
+        font-weight: 600;
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__options {
+        font-family: 'Taviraj';
+    }
+
+    &__info {
+        align-self: end;
+        display: grid;
+        justify-items: end;
+
+        @media (max-width:$tablet) {
+            grid-column: span 2;
+            justify-items: start;
+        }
+
+        @media (max-width: em(500)) {
+            grid-column: auto;
+            gap: rem(15);
+        }
+    }
+
+    &__packaging {
+        display: grid;
+
+        &:not(:last-child) {
+            margin-bottom: rem(34);
+
+            @media (max-width: em(500)) {
+                margin-bottom: rem(20);
+            }
+        }
+
+    }
+
+    &__label {
+        text-align: right;
+        font-family: 'Taviraj';
+        font-weight: 500;
+        line-height: math.div(24, 16);
+        letter-spacing: 0.03em;
+        color: $darkColor;
+        margin-bottom: rem(8);
+
+        @media (max-width:$tablet) {
+            text-align: left;
+        }
+
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: em(600)) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: rem(15);
+        }
+    }
+
+    &__quantity {
+        flex: 0 0 rem(120);
+        width: rem(120);
+        margin-right: rem(19);
+
+        @media (max-width: em(600)) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__total {
+        font-size: rem(24);
+        line-height: math.div(32, 24);
+        font-family: 'Taviraj';
+        letter-spacing: 0.02em;
+        color: $darkColor;
+        font-weight: 600;
+        margin-right: rem(32);
+        flex-shrink: 0;
+    }
+
+    &__delete {
+        width: rem(36);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: rem(1) solid $orangeColor;
+        color: $orangeColor;
+        flex: 0 0 rem(36);
+        height: rem(36);
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $orangeColor;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.options-item-cart {
+
+    &__label {
+
+        &:not(:last-child) {
+            margin-bottom: rem(4);
+        }
+    }
+
+    &__value {
+        color: #555555;
+        line-height: math.div(24, 16);
+        letter-spacing: 0.03em;
+    }
+}
+
+
+.promo-cart {
+    display: flex;
+    align-items: center;
+    font-family: 'Taviraj';
+
+    @media (max-width:$mobile) {
+        flex-direction: column;
+        gap: rem(15);
+        align-items: stretch;
+
+    }
+
+    &__label {
+        font-size: rem(20);
+        line-height: math.div(20, 24);
+        letter-spacing: 0.02em;
+        color: $darkColor;
+    }
+
+    &__line {
+        margin-right: rem(16);
+        margin-left: rem(32);
+
+        @media (max-width:$mobile) {
+            margin-right: rem(0);
+            margin-left: rem(0);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        background: #FFFFFF;
+        border: rem(1) solid $darkColor;
+        height: rem(42);
+        padding: 0 rem(15);
+    }
+
+    &__info {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #01522D;
+    }
+}
+
+.total-cart {
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    font-family: 'Taviraj';
+
+    @media (max-width:$mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: rem(15);
+    }
+
+    &__label {
+        font-size: rem(20);
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: $darkColor;
+
+        @media (max-width:$tablet) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__value {
+        @media (min-width:$mobile) {
+            display: grid;
+            justify-items: end;
+        }
+
+    }
+
+    &__old-price {
+        &:not(:last-child) {
+            margin-bottom: rem(4);
+        }
+    }
+
+    &__price {
+        font-size: rem(24);
+        font-weight: 600;
+        line-height: 1.33;
+        color: $darkColor;
+    }
+}

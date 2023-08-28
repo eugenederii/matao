@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Product Page"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="product">
+            <nav class="product__breadcrumbs breadcrumbs">
+                <div class="breadcrumbs__container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Product</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Watches</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Way Kambas Mini Ebony</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <section class="product__body body-product">
+                <div class="body-product__container">
+                    <div class="body-product__images">
+                        <div class="images-product">
+                            <div class="images-product__slider swiper">
+                                <div class="images-product__wrapper swiper-wrapper">
+                                    <div class="images-product__slide swiper-slide">
+                                        <img src="@img/product/images/01.png" alt="Image">
+                                    </div>
+                                    <div class="images-product__slide swiper-slide">
+                                        <img src="@img/product/images/02.png" alt="Image">
+                                    </div>
+                                    <div class="images-product__slide swiper-slide">
+                                        <img src="@img/product/images/03.png" alt="Image">
+                                    </div>
+                                    <div class="images-product__slide swiper-slide">
+                                        <img src="@img/product/images/04.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="images-preview">
+                            <div class="images-preview__slider swiper">
+                                <div class="images-preview__wrapper swiper-wrapper">
+                                    <div class="images-preview__slide swiper-slide">
+                                        <img src="@img/product/images/preview/01.png" alt="Image">
+                                    </div>
+                                    <div class="images-preview__slide swiper-slide">
+                                        <img src="@img/product/images/preview/02.png" alt="Image">
+                                    </div>
+                                    <div class="images-preview__slide swiper-slide">
+                                        <img src="@img/product/images/preview/03.png" alt="Image">
+                                    </div>
+                                    <div class="images-preview__slide swiper-slide">
+                                        <img src="@img/product/images/preview/04.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#" class="body-product__content">
+                        <h1 data-da=".body-product__container,1140,first" class="body-product__title">WAY KAMBAS MINI EBONY</h1>
+                        <div class="body-product__price price-product">
+                            <div class="price-product__old">Rp 1.280.000</div>
+                            <div class="price-product__value">Rp 1.024.000</div>
+                        </div>
+                        <div class="body-product__model model-product">
+                            <div class="model-product__label">Choose Model</div>
+                            <div class="model-product__options">
+                                <div class="model-product__option option-product">
+
+                                    <label class="option-product__label">
+                                        <input checked type="radio" name="model" class="option-product__input" value="1">
+                                        <img src="@img/product/models/01.jpg" alt="Model #1">
+                                    </label>
+                                </div>
+                                <div class="model-product__option option-product">
+
+                                    <label class="option-product__label">
+                                        <input type="radio" name="model" class="option-product__input" value="2">
+                                        <img src="@img/product/models/02.jpg" alt="Model #2">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating rating_set">
+                            <div class="rating__body">
+                                <div class="rating__active"></div>
+                                <div class="rating__items">
+                                    <input type="radio" class="rating__item" value="1" name="rating">
+                                    <input type="radio" class="rating__item" value="2" name="rating">
+                                    <input type="radio" class="rating__item" value="3" name="rating">
+                                    <input type="radio" class="rating__item" value="4" name="rating">
+                                    <input type="radio" class="rating__item" value="5" name="rating">
+                                </div>
+                            </div>
+                            <div class="rating__value">3.6</div>
+                        </div>
+                        <div class="body-product__actions">
+                            <div data-quantity class="body-product__quantity quantity">
+                                <button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+                                <div class="quantity__input">
+                                    <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                                </div>
+                                <button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+                            </div>
+                            <button type="button" class="body-product__add-to-cart button button__cart"><span
+                                    class="_icon-cart-plus"></span>Add to
+                                cart</button>
+                            <button type="button" class="body-product__cicil border-button border-button_cicil">
+                                <img src="@img/icons/cicil.svg" alt="Image">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="product__info info-product">
+                <div class="info-product__container">
+                    <div data-tabs class="info-product__tabs">
+                        <nav data-tabs-titles class="info-product__navigation">
+                            <button type="button" class="info-product__title _tab-active">Detail</button>
+                            <button type="button" class="info-product__title">Warranty</button>
+                            <button type="button" class="info-product__title">Custom Engrave</button>
+                            <button type="button" class="info-product__title">How to Adjust</button>
+                            <button type="button" class="info-product__title">How to Care</button>
+                            <button type="button" class="info-product__title">Gallery</button>
+                        </nav>
+                        <div data-tabs-body class="info-product__content">
+                            <div class="info-product__body">
+                                <h4 class="info-product__label">Material</h4>
+                                <div class="info-product__text">
+                                    <p>MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica).
+                                        This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect
+                                        on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin
+                                        about 10-16mm, and is soft and pliable.
+                                    </p>
+                                </div>
+                                <h4 class="info-product__label">Material</h4>
+                                <div class="info-product__text">
+                                    <p>MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica).
+                                        This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect
+                                        on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin
+                                        about 10-16mm, and is soft and pliable.
+                                    </p>
+                                </div>
+                                <h4 class="info-product__label">Material</h4>
+                                <div class="info-product__text">
+                                    <p>MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica).
+                                        This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect
+                                        on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin
+                                        about 10-16mm, and is soft and pliable.
+                                    </p>
+                                </div>
+                                <div class="info-product__image">
+                                    <img src="@img/product/info/info.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="info-product__body">
+                                Содержимое второго таба
+                            </div>
+                            <div class="info-product__body">
+                                Содержимое третьего таба
+                            </div>
+                            <div class="info-product__body">
+                                Содержимое 4 таба
+                            </div>
+                            <div class="info-product__body">
+                                Содержимое 5 таба
+                            </div>
+                            <div class="info-product__body">
+                                Содержимое 6 таба
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product__relate relate">
+                <div class="relate__container">
+                    <h3 class="relate__title title">Relate Products</h3>
+                    <div class="relate__items">
+                        <article class="relate__item item-relate">
+                            <div class="item-relate__labels">
+                                <div class="item-relate__label item-relate__label_sale">20% OFF</div>
+                                <div class="item-relate__label item-relate__label_new">NEW</div>
+                            </div>
+                            <a href="#" class="item-relate__image-ibg">
+                                <img src="@img/relate/01.jpg" alt="Image">
+                            </a>
+                            <h4 class="item-relate__title">
+                                <a href="" class="item-relate__link-title">Singo Maple</a>
+                            </h4>
+                            <div class="item-relate__old-price">Rp 1.500.000</div>
+                            <div class="item-relate__price">Rp 1.264.000</div>
+                        </article>
+                        <article class="relate__item item-relate">
+                            <div class="item-relate__labels">
+                                <div class="item-relate__label item-relate__label_new">NEW</div>
+                            </div>
+                            <a href="#" class="item-relate__image-ibg">
+                                <img src="@img/relate/02.jpg" alt="Image">
+                            </a>
+                            <h4 class="item-relate__title">
+                                <a href="" class="item-relate__link-title">Sikka (Ebony & Maple)</a>
+                            </h4>
+                            <div class="item-relate__price">Rp 1.264.000</div>
+                        </article>
+                        <article class="relate__item item-relate">
+                            <div class="item-relate__labels"></div>
+                            <a href="#" class="item-relate__image-ibg">
+                                <img src="@img/relate/03.jpg" alt="Image">
+                            </a>
+                            <h4 class="item-relate__title">
+                                <a href="" class="item-relate__link-title">Sunda</a>
+                            </h4>
+                            <div class="item-relate__price">Rp 1.170.000</div>
+                        </article>
+                        <article class="relate__item item-relate">
+                            <div class="item-relate__labels">
+                                <div class="item-relate__label item-relate__label_sale">25% OFF</div>
+                            </div>
+                            <a href="#" class="item-relate__image-ibg">
+                                <img src="@img/relate/04.jpg" alt="Image">
+                            </a>
+                            <h4 class="item-relate__title">
+                                <a href="" class="item-relate__link-title">Sikka (Ebony & Maple)</a>
+                            </h4>
+                            <div class="item-relate__old-price">Rp 1.280.000</div>
+                            <div class="item-relate__price">Rp 1.264.000</div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="product__clients clients">
+                <div class="clients__container">
+                    <div class="clients__item">
+                        <img src="@img/top-footer/01.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/02.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/03.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/04.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/05.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/06.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/07.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/08.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/09.png" alt="Image">
+                    </div>
+                    <div class="clients__item">
+                        <img src="@img/top-footer/10.png" alt="Image">
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

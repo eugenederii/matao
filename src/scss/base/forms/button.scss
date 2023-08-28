@@ -1,0 +1,107 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	background-color: $orangeColor;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Taviraj';
+	font-style: normal;
+	font-weight: 500;
+	font-size: rem(20);
+	line-height: 1.6;
+	letter-spacing: 0.03em;
+	color: #FFFFFF;
+	padding: rem(15) rem(35) rem(14) rem(35);
+	display: inline-flex;
+	transition: background-color 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #f37a5f;
+		}
+	}
+
+	&._fw {
+		width: 100%;
+	}
+
+	&_h68 {
+		padding: rem(18) rem(35);
+	}
+
+	&_small {
+		font-size: 16px;
+		line-height: 1.5;
+		padding: rem(8) rem(35);
+	}
+
+	&_big {
+		font-weight: 700;
+		padding: rem(18) rem(35);
+	}
+
+	&_cart {
+		font-weight: 400;
+		line-height: 1.7;
+		padding: rem(14) rem(35);
+
+		span {
+			display: flex;
+			gap: rem(18.5);
+			align-items: center;
+
+			&::before {
+				width: rem(21.3);
+				flex: 0 0 rem(21.3);
+			}
+		}
+	}
+}
+
+.border-button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Taviraj';
+	border: rem(1) solid $orangeColor;
+	color: $orangeColor;
+	font-weight: 500;
+	font-size: rem(20);
+	line-height: 1.6;
+	letter-spacing: 0.03em;
+	padding: rem(15) rem(35) rem(14) rem(30);
+	transition: background-color 0.5s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $orangeColor;
+			color: #FFFFFF;
+		}
+	}
+
+	&_small {
+		border: rem(2) solid $orangeColor;
+		font-size: rem(16);
+		line-height: math.div(27, 16);
+		font-weight: 400;
+	}
+
+	&_big {
+		font-weight: 400;
+		padding: rem(16) rem(35);
+		line-height: math.div(32, 20);
+	}
+
+	&_cicil {
+		border: rem(2) solid $orangeColor;
+		padding: rem(13) rem(40) rem(12) rem(40);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $orangeColorLite;
+			}
+		}
+	}
+}
